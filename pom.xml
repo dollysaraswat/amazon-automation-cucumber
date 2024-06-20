@@ -1,0 +1,121 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>amazon-automation-cucumber</groupId>
+  <artifactId>amazon-automation-cucumber</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <packaging>jar</packaging>
+    <name>Cucumber-Java-JUnit Project</name>
+
+    <properties>
+        <cucumber.version>1.2.4</cucumber.version>
+        <java.version>1.7</java.version>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        
+        
+		        <dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-junit</artifactId>
+		    <version>7.17.0</version>
+		    <scope>test</scope>
+		</dependency>
+		 
+		 <dependency>
+		    <groupId>tech.grasshopper</groupId>
+		    <artifactId>extent-pdf-report</artifactId>
+		    <version>2.12.0</version>
+		</dependency>
+		        
+		        <dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>2.1.0-alpha1</version>
+		</dependency>
+		
+		        
+		        
+		        
+		        <dependency>
+		       <groupId>org.seleniumhq.selenium</groupId>
+		       <artifactId>selenium-java</artifactId>
+		       <version>4.21.0</version>
+		            </dependency>
+		        
+		        
+		        <dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-java</artifactId>
+		    <version>7.17.0</version>
+		     </dependency>
+		        
+		        <dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.18.24</version>
+		    <scope>provided</scope>
+		</dependency>
+        </dependencies>
+    
+    
+    
+    
+    
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <compilerArgument>-Werror</compilerArgument>
+                </configuration>
+            </plugin>
+            <!--<plugin>
+                    <groupId>net.masterthought</groupId>
+                    <artifactId>maven-cucumber-reporting</artifactId>
+                    <version>5.6.0</version>
+                    <executions>
+                        <execution>
+                            <id>execution</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <configuration>
+                                <projectName>Amazon-ui-automation_CucumberWebGui</projectName>
+                                <outputDirectory>${project.build.directory}/cucumber/reports</outputDirectory>
+                                <cucumberOutput>${project.build.directory}/cucumber</cucumberOutput>
+                                <inputDirectory>${project.build.directory}/cucumber</inputDirectory>
+                                <checkBuildResult>false</checkBuildResult>
+                                <skippedFails>true</skippedFails>
+                                <enableFlashCharts>true</enableFlashCharts>
+                                <jsonFiles>
+                                <param>**/*.json</param>
+                                </jsonFiles>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>-->
+        </plugins>
+    </build>
+</project>
