@@ -1,3 +1,5 @@
+
+
 @Amazon2
 Feature: To validate user can search , filter and add to cart then checkout product 
 
@@ -8,4 +10,4 @@ Feature: To validate user can search , filter and add to cart then checkout prod
    	Then User get the product
    	Then User filter the search result 
    	And User add the product to cart
-   	Then User Fill the checkout and fill the form
+   	Then User checkout and fill the form

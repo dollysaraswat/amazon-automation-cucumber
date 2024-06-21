@@ -37,7 +37,7 @@ public class AmazonSteps {
         amazon.addtocart();
     }
                
-    @Then("^User Fill the checkout and fill the form$")
+    @Then("^User checkout and fill the form$")
     public void checkform() throws InterruptedException{
     amazon.checkoutform();        	
     }

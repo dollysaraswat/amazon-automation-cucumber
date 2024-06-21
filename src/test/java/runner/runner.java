@@ -15,8 +15,5 @@ import pages.BasePage;
         plugin = {"json:target/cucumber.json"}
 )
 public class runner {
-	/*@AfterClass
-	public static void cleanDriver(){
-	BasePage.closeBrowser();*/
-	//}
+	
 }
