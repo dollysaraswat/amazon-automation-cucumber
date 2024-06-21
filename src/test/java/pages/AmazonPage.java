@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 
 public class AmazonPage extends BasePage {
     
@@ -31,6 +32,8 @@ public class AmazonPage extends BasePage {
     private String password  = "//input[@type='password']";
     private String signin  = "//input[@id='signInSubmit']";
     private String useaddress = "//span[@id='orderSummaryPrimaryActionBtn']";
+    private String slide = "//input[@id='p_36/range-slider_slider-item_upper-bound-slider']";
+  
    
    
  
@@ -51,12 +54,14 @@ public class AmazonPage extends BasePage {
     	isvisible(productimage);
     }
     
-    public void filterproduct(){
+    public void filterproduct() throws InterruptedException{
     	 clickElement(sortby);
     	 clickElement(avgcustomerrating);
     	 clickElement(gettomorrow);
     	 scrolldown();
-    	 clickElement (topbrand);	 
+    	 clickElement(topbrand);	 
+    	 scrolldown();
+    	 slider();
     }
     
     public void addtocart(){
@@ -69,10 +74,10 @@ public class AmazonPage extends BasePage {
         public void checkoutform() {
         	 clickElement(checkout); 
         	 clickElement(loginusername);
-        	 BasePage.write(loginusername,"8800896384");
+        	 BasePage.write(loginusername,"enter your username");
         	 clickElement(continuebutton);
         	 clickElement(password);
-        	 BasePage.write(password,"Delhi@2024"); 
+        	 BasePage.write(password,"enter password"); 
         	 clickElement(signin);
         	 isvisible(checkouth);  	
         	 clickElement(useaddress);
@@ -87,6 +92,14 @@ public class AmazonPage extends BasePage {
         	JavascriptExecutor js = (JavascriptExecutor)driver;
         	WebElement button = driver.findElement(By.xpath(paymentmethod));
         	js.executeScript("arguments[0].scrollIntoView();",button);
+        }
+        
+        
+        public void slider() throws InterruptedException {
+        	WebElement slider = driver.findElement(By.xpath(slide));
+        	Thread.sleep(2000);
+        	Actions action = new Actions(driver);
+        	action.dragAndDropBy(slider,50,0).perform();    
         }
         
         public void scrollproductimage(){

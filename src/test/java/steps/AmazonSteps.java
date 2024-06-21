@@ -28,7 +28,7 @@ public class AmazonSteps {
     }
     
     @Then("^User filter the search result$")
-    public void filterthedata(){
+    public void filterthedata() throws InterruptedException{
         amazon.filterproduct();  
     }
 
