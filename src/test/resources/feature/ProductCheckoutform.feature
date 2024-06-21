@@ -1,7 +1,5 @@
-
-
 @Amazon2
-Feature: To validate user can search , filter and add to cart then checkout product 
+Feature: To validate user can search checkout and fill the checkout form
 
     @Scenario4  @Scenario5 
    	Scenario: This scenario contain proceeding to checkout and fill the checkout form

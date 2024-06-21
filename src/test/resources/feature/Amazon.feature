@@ -1,9 +1,8 @@
-
 @Amazon1
 Feature: To validate user can search , filter and add to cart then checkout product 
  
 
-  	 @Scenario1  
+  	@Scenario1  
    	Scenario: This scenario contain searching for a product 
     Given the user navigate to Amazon Website
     And User click on search textarea then enter the product 
