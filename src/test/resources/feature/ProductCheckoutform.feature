@@ -1,5 +1,5 @@
 @Amazon2
-Feature: To validate user can search checkout and fill the checkout form
+Feature: To validate user can checkout and fill the checkout form
 
    @Scenario4  @Scenario5 
    Scenario: This scenario contain proceeding to checkout and fill the checkout form
