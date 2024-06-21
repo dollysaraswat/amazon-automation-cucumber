@@ -11,12 +11,12 @@ import pages.BasePage;
 @CucumberOptions(
         features="src/test/resources/feature",
         glue="steps",
-        tags="@Scenario2",
+        tags="@Amazon1",
         plugin = {"json:target/cucumber.json"}
 )
 public class runner {
-	@AfterClass
+	/*@AfterClass
 	public static void cleanDriver(){
-	BasePage.closeBrowser();
-	}
+	BasePage.closeBrowser();*/
+	//}
 }
